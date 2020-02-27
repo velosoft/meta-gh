@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const assertUsage = require('../lib/assertUsage');
+const utils = require('../lib/utils');
 const metaLoop = require('meta-loop');
 
 const usage = `
@@ -28,4 +29,4 @@ if (process.argv[2] === '--help') return console.log(usage);
 
 if (!assertUsage('meta gh repo', usage, { allow: /.*/ })) return console.log(usage);
 
-metaLoop(`gh repo ${process.argv.slice(2).join(' ')}`);
+metaLoop(`gh repo ${utils(process.argv)}`);

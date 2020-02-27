@@ -1,6 +1,6 @@
 {
-  "name": "meta-gh",
-  "version": "0.0.0-development",
+  "name": "@velosoft/meta-gh",
+  "version": "0.0.1-velosoft-0",
   "description": "gh plugin for meta",
   "bin": {
     "meta-gh": "./bin/meta-gh",
@@ -23,10 +23,6 @@
     "test:watch": "jest --config jest.json --watch"
   },
   "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "repository": {
     "type": "git",
